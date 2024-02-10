@@ -1,6 +1,5 @@
 "use strict";
-const APIKEY = "sk-rTUm65c3fe816e1324068";
-//const APIKEY="sk-yoVU65c4f724016454078";
+const APIKEY="sk-Fp8X65c7ee8312fb54101";
 const BASE_URL = "https://perenual.com/api/";
 const selectedPlantKind = document.getElementById("selectedPlantKind");
 
