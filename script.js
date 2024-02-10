@@ -1,12 +1,11 @@
 "use strict";
-const APIKEY="sk-Fp8X65c7ee8312fb54101";
+const APIKEY = "sk-Fp8X65c7ee8312fb54101";
 const BASE_URL = "https://perenual.com/api/";
 const selectedPlantKind = document.getElementById("selectedPlantKind");
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    fetch(BASE_URL
-        + "species-list?key=" + APIKEY)
+    fetch(BASE_URL + "species-list?key=" + APIKEY)
         .then(response => response.json())
         .then(response => {
             const species = response.data;
@@ -64,19 +63,19 @@ selectedPlantKind.addEventListener("change", () => {
     }
     else if (selectedOption.value === OPTION_IMG_PROMISE && selectedSpecies.value) {
         p.style = "display:none";
-            fetch(BASE_URL + "species/details/" + selectedSpecies.value + "?key=" + APIKEY)
-                .then(response => response.json())
-                .then(response => {
-                    const img = document.getElementById("plantImg");
-                    img.setAttribute("src", response?.default_image.small_url);
-                    img.style = "display:block;"
-                    defaultImg.style = "display:none";
-                })
-                .catch(error => {
-                    errorMessage.style = "display:block";
-                    console.log("Error fetching image with promise:", error);
-                });
-        
+        fetch(BASE_URL + "species/details/" + selectedSpecies.value + "?key=" + APIKEY)
+            .then(response => response.json())
+            .then(response => {
+                const img = document.getElementById("plantImg");
+                img.setAttribute("src", response?.default_image.small_url);
+                img.style = "display:block;"
+                defaultImg.style = "display:none";
+            })
+            .catch(error => {
+                errorMessage.style = "display:block";
+                console.log("Error fetching image with promise:", error);
+            });
+
 
     }
     else if (selectedOption.value === OPTION_TXT_ASYNC && selectedSpecies.value) {
@@ -94,26 +93,26 @@ selectedPlantKind.addEventListener("change", () => {
                 console.log("Error fetching scientific name with promise:", error);
             }
         }
-       apiAsync();
+        apiAsync();
 
     }
     else if (selectedOption.value === OPTION_TXT_PROMISE && selectedSpecies.value) {
         img.style = "display:none";
-        
-            fetch(BASE_URL + "species/details/" + selectedSpecies.value + "?key=" + APIKEY)
-                .then(response => response.json())
-                .then(response => {
-                    document.getElementById("scientificName").textContent = response.scientific_name;
-                    p.style = "display:block;"
-                    document.getElementById("scientificName").innerHTML = `El nombre científico de la especie seleccionada es: ${response.scientific_name}`;
-                    defaultImg.style = "display:none";
-                })
-                .catch(error => {
-                    console.log("Error fetching scientific name with promise:", error);
-                    errorMessage.style = "display:block";
-                });
+
+        fetch(BASE_URL + "species/details/" + selectedSpecies.value + "?key=" + APIKEY)
+            .then(response => response.json())
+            .then(response => {
+                document.getElementById("scientificName").textContent = response.scientific_name;
+                p.style = "display:block;"
+                document.getElementById("scientificName").innerHTML = `El nombre científico de la especie seleccionada es: ${response.scientific_name}`;
+                defaultImg.style = "display:none";
+            })
+            .catch(error => {
+                console.log("Error fetching scientific name with promise:", error);
+                errorMessage.style = "display:block";
+            });
     }
     else {
-        defaultImg.style="display:block";
+        defaultImg.style = "display:block";
     }
 });
