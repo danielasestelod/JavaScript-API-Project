@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div id="header">
+            <img src="https://cdn-icons-png.flaticon.com/128/2698/2698194.png" alt="sun icon">
+        </div>
+    </header>
+    <main>
+        <h4 id="Level4Header">Realiza las dos selecciones para observar el resultado.</h4>
+        <div id="mainContent">
+            <div class="selectsContainer">
+                <select name="methodAsync" id="selectMethod">
+                    <option value="">Selecciona el método que se usará</option>
+                    <option value="optionImgAsync" id="selectedOption1">Imagenes con async/await</option>
+                    <option value="optionImgPromise" id="selectedOption2">Imagenes con promesas</option>
+                    <option value="optionTxAsync">Texto con async/await</option>
+                    <option value="optionTxPromise">Texto con promesas</option>
+                </select>
+                <select name="plantKind" id="selectedPlantKind">
+                    <option value="">Selecciona un nombre común de planta</option>
+                </select>
+            </div>
+           <div id="divResult">
+                <img src="https://cdn-icons-png.flaticon.com/128/1463/1463118.png" alt="tree icon" id="defaultImg">
+                <img src="" alt="plant image" id="plantImg">
+                <p id="scientificName"></p>
+           </div>
+                
+            
+        </div>
+        
+        
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

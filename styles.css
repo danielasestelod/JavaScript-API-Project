@@ -1,0 +1,85 @@
+body,html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #252c25;
+}
+h4{
+    color: rgb(236, 236, 236);
+}
+#header {
+    margin: 0;
+    background-image: url("https://img.freepik.com/foto-gratis/primer-plano-arbusto-verde_1162-53.jpg?w=740&t=st=1707428164~exp=1707428764~hmac=c315bf8b03365b010dc93373b3f78605abcb9c0e8fbe1b362d727d34761df0e1");
+    height: 25vh;
+    width: 100%;
+    border-style: none;
+    background-color: rgb(223, 219, 219);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#header>img {
+    margin: 0 6vw;
+    width: 90px ;
+    height: 90px;
+}
+
+main {
+    padding: 2% 10%;
+    
+}
+#mainContent{
+    display: flex;
+    width: auto;
+    flex-direction: row;
+}
+
+.selectsContainer {
+    margin: 2% 0;
+    width: 25%;
+    padding: 1vh;
+}
+select{
+    width: 25vw;
+    text-align: justify;
+    margin-bottom:2%;
+    padding: 4%;
+    border:  2px solid rgb(39, 39, 39);
+    border-radius: 4px;
+    outline: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+select>option {
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+#plantImg {
+    margin-top: 2%;
+    padding: 1vh;
+    display: none;
+    border-radius: 4px;
+    border-radius: 4px;
+    
+}
+#scientificName{
+    margin-top: 2%;
+    color:rgb(236, 236, 236);
+    
+    padding: 1.5vh;
+    display: none;
+    font-weight: bold;
+}
+#divResult{
+    display: none;
+    margin: 1% 15%;
+    padding: 25px;
+    border-radius: 4px;
+    background-color: rgba(245, 241, 241, 0.3);
+    display: inline-block;
+}
+
+
+
