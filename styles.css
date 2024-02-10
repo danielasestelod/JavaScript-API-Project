@@ -4,7 +4,7 @@ body,html {
     padding: 0;
     background-color: #252c25;
 }
-h4{
+h4 {
     color: rgb(236, 236, 236);
 }
 #header {
@@ -72,6 +72,7 @@ select>option {
     display: none;
     font-weight: bold;
 }
+
 #divResult{
     display: none;
     margin: 1% 15%;
@@ -81,5 +82,9 @@ select>option {
     display: inline-block;
 }
 
-
-
+#errorMessage{
+    color: rgb(173, 11, 11);
+    font-weight: bolder;
+    font-size: larger;
+    display: none;
+}
